@@ -65,7 +65,7 @@
             app:cardCornerRadius="5dp">
 
             <ImageView
-                android:id="@+id/img_food"
+                android:id="@+id/img_ballroom"
                 android:layout_width="match_parent"
                 android:layout_height="175dp"
                 android:scaleType="fitXY"
@@ -75,7 +75,7 @@
 
         </androidx.cardview.widget.CardView>
         <TextView
-            android:id="@+id/foodName"
+            android:id="@+id/tv_name_ballroom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
@@ -87,7 +87,7 @@
             />
 
         <TextView
-            android:id="@+id/tv_calorie_info"
+            android:id="@+id/tv_address_balroom"
             android:layout_width="wrap_content"
             android:layout_marginTop="9dp"
             android:fontFamily="@font/segoe_ui"
@@ -124,6 +124,7 @@
 
         </LinearLayout>
         <TextView
+            android:id="@+id/tv_prize"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/segoe_ui"
@@ -148,7 +149,7 @@
         <RelativeLayout
 
         android:layout_width="match_parent"
-        android:id="@+id/linear_breakfast"
+        android:id="@+id/linear_sound"
         android:layout_height="71dp"
         android:background="@drawable/linear_menu_new"
         android:layout_marginTop="16dp"
@@ -156,7 +157,7 @@
         >
         <ImageView
             android:layout_width="61dp"
-            android:id="@+id/img_egg"
+            android:id="@+id/img_speaker"
             android:layout_height="match_parent"
             android:layout_marginStart="3dp"
             android:src="@drawable/speaker"
@@ -165,19 +166,19 @@
 
 
         <TextView
-            android:id="@+id/tv_today_breakfast"
+            android:id="@+id/tv_today_sound"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="9dp"
             android:layout_centerVertical="true"
-            android:layout_toRightOf="@+id/img_egg"
+            android:layout_toRightOf="@+id/img_speaker"
             android:fontFamily="@font/segoe_ui_bold"
             android:text="Sound System"
             android:textColor="#332D2D"
             android:textSize="18sp" />
 
         <mehdi.sakout.fancybuttons.FancyButton
-            android:id="@+id/btn_add_breakfast"
+            android:id="@+id/btn_add_sound"
             android:layout_width="34dp"
             android:layout_height="34dp"
             android:layout_alignParentRight="true"
@@ -197,7 +198,7 @@
         <RelativeLayout
 
             android:layout_width="match_parent"
-            android:id="@+id/linear_breakfast"
+            android:id="@+id/linear_catering"
             android:layout_height="71dp"
             android:background="@drawable/linear_menu_new"
             android:layout_marginTop="16dp"
@@ -205,7 +206,7 @@
             >
             <ImageView
                 android:layout_width="61dp"
-                android:id="@+id/img_egg"
+                android:id="@+id/img_catering"
                 android:layout_height="match_parent"
                 android:layout_marginStart="3dp"
                 android:src="@drawable/catering"
@@ -214,19 +215,19 @@
 
 
             <TextView
-                android:id="@+id/tv_today_breakfast"
+                android:id="@+id/tv_today_catering"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="9dp"
                 android:layout_centerVertical="true"
-                android:layout_toRightOf="@+id/img_egg"
+                android:layout_toRightOf="@+id/img_catering"
                 android:fontFamily="@font/segoe_ui_bold"
                 android:text="Catering"
                 android:textColor="#332D2D"
                 android:textSize="18sp" />
 
             <mehdi.sakout.fancybuttons.FancyButton
-                android:id="@+id/btn_add_breakfast"
+                android:id="@+id/btn_add_catering"
                 android:layout_width="34dp"
                 android:layout_height="34dp"
                 android:layout_alignParentRight="true"
@@ -262,21 +263,21 @@ android:layout_marginStart="30dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
             <ImageButton
-                android:id="@+id/btn_once_time"
+                android:id="@+id/btn_time_picker"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/alarm1" />
+               />
             <TextView
                 android:id="@+id/tv_once_time"
                 android:layout_width="wrap_content"
                 android:layout_marginStart="10dp"
                 android:textSize="16sp"
                 android:layout_height="wrap_content"
-                android:text="@string/alarm_time" />
+                android:text="@string/tanggal" />
         </LinearLayout>
 
         <Button
-            android:id="@+id/btn_set_once_alarm"
+            android:id="@+id/btn_book_now"
 
             android:layout_width="250dp"
             android:layout_gravity="center"

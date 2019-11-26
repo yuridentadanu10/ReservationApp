@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background_login2"
+    android:orientation="vertical"
+    android:scrollbarAlwaysDrawVerticalTrack="true"
+    tools:context=".loginAndFriend.LoginActivity">
+
+    <RelativeLayout
+        android:id="@+id/whitebox"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.614">
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHighlight="#4F8D46"
+                android:outlineAmbientShadowColor="#4F8D46"
+                android:outlineSpotShadowColor="#4F8D46"
+                android:textColorHint="#4F8D46"
+                android:shadowColor="#4F8D46"
+                android:textColor="#4F8D46"
+                android:hint="Email">
+
+
+            </androidx.appcompat.widget.AppCompatEditText>
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:textColor="#4F8D46"
+                android:outlineAmbientShadowColor="#4F8D46"
+                android:outlineSpotShadowColor="#4F8D46"
+                android:textColorHint="#4F8D46"
+                android:shadowColor="#4F8D46"
+                android:textColorHighlight="#4F8D46"
+                android:inputType="textPassword">
+
+
+            </androidx.appcompat.widget.AppCompatEditText>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:paddingTop="5dp"
+                android:text="Forgot Password?" />
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="22dp"
+                android:text="Sign In"
+                android:backgroundTint="@color/darkblue"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_dontHave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/whitebox"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="right"
+        android:paddingTop="5dp"
+        android:text="Didn't have an account? Sign Up"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/whitebox" />
+</androidx.constraintlayout.widget.ConstraintLayout>

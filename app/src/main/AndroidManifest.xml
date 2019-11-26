@@ -8,16 +8,18 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".trip3"></activity>
-        <activity android:name=".DetailRoom"></activity>
-        <activity android:name=".MainActivity">
+        android:theme="@style/AppTheme">
+        <activity android:name=".recyclerView.MainActivity"></activity>
+        <activity android:name=".loginAndFriend.RegisterActivity" />
+        <activity android:name=".loginAndFriend.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".recyclersound.trip3" />
+        <activity android:name=".DetailRoom" />
     </application>
 
 </manifest>

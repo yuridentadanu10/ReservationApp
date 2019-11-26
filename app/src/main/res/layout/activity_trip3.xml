@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F5FAFF"
-    tools:context=".trip3">
+    tools:context=".recyclersound.trip3">
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -38,9 +38,9 @@
         android:textSize="22sp"/>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerview"
+        android:id="@+id/rv_speaker"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_below="@+id/tv_sound"
         tools:listitem="@layout/list_item_sound"/>
 

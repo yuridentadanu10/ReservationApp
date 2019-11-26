@@ -1,18 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".recyclerView.MainActivity"
+    >
+
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:background="@drawable/menu"
+    >
 
     <TextView
-        android:layout_width="wrap_content"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:fontFamily="@font/segoe_ui_bold"
+    android:text="@string/Ballroom_hotel"
+    android:textSize="18sp"
+    android:textColor="#0664A2"
+    android:layout_marginStart="27dp"
+    android:layout_marginEnd="198dp"
+    android:layout_marginTop="180dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_ballroom"
+        android:layout_marginStart="19dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+        />
+    <TextView
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/segoe_ui_bold"
+        android:text="@string/Convention_center"
+        android:textSize="18sp"
+        android:textColor="#0664A2"
+        android:layout_marginStart="27dp"
+        android:layout_marginEnd="198dp"
+        android:layout_marginTop="50dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_ballroom1"
+        android:layout_marginStart="19dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+
+        />
+
+
+
+</LinearLayout>
+</ScrollView>
