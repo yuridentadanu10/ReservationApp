@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 29
@@ -22,38 +21,9 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'com.google.android.material:material:1.0.0-alpha3'
+    implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'com.google.firebase:firebase-firestore:21.2.1'
-    implementation 'com.google.firebase:firebase-auth:19.1.0'
-    implementation 'com.mikhaellopez:circularprogressbar:3.0.3'
-    implementation 'androidx.cardview:cardview:1.0.0'
-    implementation 'com.google.firebase:firebase-ml-vision:23.0.0'
-    implementation 'com.google.firebase:firebase-ml-vision-automl:18.0.1'
-    implementation 'com.google.firebase:firebase-storage:19.1.0'
-    implementation 'com.firebaseui:firebase-ui-storage:4.3.1'
-
-    implementation 'com.google.firebase:firebase-database:16.0.4'
     testImplementation 'junit:junit:4.12'
-    implementation 'com.squareup.picasso:picasso:2.71828'
-    androidTestImplementation 'androidx.test:runner:1.2.0'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-    implementation 'com.firebaseui:firebase-ui-firestore:6.0.2'
-    implementation 'com.google.firebase:firebase-analytics:17.2.1'
-    implementation 'com.google.android.material:material:1.0.0'
-    implementation 'com.github.medyo:fancybuttons:1.9.1'
-    implementation 'com.mikhaellopez:circularimageview:3.2.0'
-    implementation 'com.github.dmytrodanylyk.shadow-layout:library:1.0.3'
-    implementation 'me.gujun.android.taggroup:library:1.4@aar'
-    implementation 'com.github.ceryle:FitGridView:v1.0.5'
-    implementation 'de.hdodenhof:circleimageview:3.0.0'
-}
-apply plugin: 'com.google.gms.google-services'
-repositories {
-    mavenCentral()
-    maven {
-        url "https://jitpack.io"
-    }
+    androidTestImplementation 'androidx.test.ext:junit:1.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
 }
