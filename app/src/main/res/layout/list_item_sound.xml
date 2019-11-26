@@ -9,14 +9,15 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="4dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="8dp"
         app:cardPreventCornerOverlap="false"
         app:cardUseCompatPadding="true">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#ffffff"
             android:padding="10dp">
 
             <RelativeLayout
@@ -25,61 +26,54 @@
                 android:layout_height="100dp"
                 android:padding="10dp">
 
-                <de.hdodenhof.circleimageview.CircleImageView
+                <ImageView
                     android:id="@+id/profile_iv"
-                    android:layout_width="@dimen/_72sdp"
-                    android:layout_height="@dimen/_72sdp"
-                    tools:src="@drawable/wcd_img.png" />
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:src="@drawable/speaker" />
             </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/relative_kanan"
-                android:layout_toEndOf="@+id/relative_kiri"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/relative_kiri"
                 android:padding="10dp">
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/profile_name_tv"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="16dp"
-                    android:orientation="vertical">
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#2980B9"
+                    android:textSize="22sp"
+                    tools:text="Wisnu Kurniawan" />
 
-                    <TextView
-                        android:id="@+id/profile_name_tv"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="14sp"
-                        tools:text="Wisnu Kurniawan" />
+                <TextView
+                    android:id="@+id/tv_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/profile_name_tv"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:textColor="#2980B9"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:text="4.0" />
 
-                    <TextView
-                        android:id="@+id/tv_rating"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/profile_name_tv"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginBottom="8dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        tools:text="5.0" />
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/profile_name_tv"
+                    android:layout_marginEnd="8dp"
+                    android:layout_toEndOf="@+id/tv_rating"
+                    android:rating="4"
+                    android:theme="@style/RatingBar"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_rating"
+                    app:layout_constraintTop_toTopOf="@+id/tv_rating" />
 
-                    <RatingBar
-                        android:id="@+id/ratingBar"
-                        style="?android:attr/ratingBarStyleSmall"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="8dp"
-                        android:layout_below="@+id/profile_name_tv"
-                        android:rating="4"
-                        android:layout_toEndOf="@+id/tv_rating"
-                        android:theme="@style/RatingBar"
-                        app:layout_constraintEnd_toStartOf="@+id/tv_rating"
-                        app:layout_constraintTop_toTopOf="@+id/tv_rating" />
-
-
-
-                </RelativeLayout>
 
             </RelativeLayout>
         </RelativeLayout>
