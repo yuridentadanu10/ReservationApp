@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">ReservationApp</string>
+    <string name="nama_hotel">Ballroom Saphire Hotel</string>
+    <string name="alamat">jl Yogyakarta 1 no 24 gejayan Daerah istimewa Yogyakarta</string>
+    <string name="harga">Rp 100.000 / jam</string>
+    <string name="include">Include</string>
+    <string name="date">Date</string>
+    <string name="book_now">book now</string>
 </resources>

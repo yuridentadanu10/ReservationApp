@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    tools:context=".DetailRoom"
     android:layout_height="match_parent"
-    tools:context=".recyclerView.DetailActivityFood"
+    android:background="#F5FAFF"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5FAFF"
+
     android:orientation="vertical">
     <ProgressBar
         android:id="@+id/progressbar"
@@ -18,7 +27,7 @@
         android:id="@+id/toolbar_support"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:background="#ffffff"
+        android:background="#01A3FF"
         app:popupTheme="@style/AppTheme.PopupOverlay"
         android:elevation="4dp">
 
@@ -26,15 +35,15 @@
             android:id="@+id/judul_toolbar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="left"
+            android:layout_gravity="center"
             android:ellipsize="end"
             android:maxLines="1"
             android:fontFamily="@font/segoe_ui_bold"
             android:textSize="20dp"
             android:layout_marginStart="15dp"
-            android:text="Chicken Sandwich"
+            android:text="Booking"
             android:textAppearance="@android:style/TextAppearance.WindowTitle"
-            android:textColor="#76C33A"
+            android:textColor="#ffffff"
             android:visibility="visible"/>
 
     </androidx.appcompat.widget.Toolbar>
@@ -44,6 +53,7 @@
         android:layout_width="match_parent"
         android:layout_below="@id/toolbar_support"
         android:layout_height="wrap_content"
+        android:background="#F5FAFF"
         android:orientation="vertical"
         >
 
@@ -59,7 +69,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="175dp"
                 android:scaleType="fitXY"
-                android:src="@drawable/food_history"
+                android:src="@drawable/saphire_hotel"
                 />
 
 
@@ -68,215 +78,215 @@
             android:id="@+id/foodName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/chicken_sandwich"
+            android:layout_marginTop="18dp"
             android:fontFamily="@font/segoe_ui_bold"
-            android:textSize="20sp"
+            android:layout_marginStart="30dp"
+            android:text="@string/nama_hotel"
+            android:textSize="18sp"
             android:textColor="#000"
-            android:layout_gravity="center"/>
-        <View
-            android:layout_width="180dp"
-            android:layout_height="1dp"
-            android:background="#BFBFBF"
-            android:layout_marginTop="12dp"
-            android:layout_marginBottom="12dp"
-            android:layout_gravity="center"/>
+            />
+
         <TextView
             android:id="@+id/tv_calorie_info"
             android:layout_width="wrap_content"
-            android:fontFamily="@font/segoe_ui_bold"
+            android:layout_marginTop="9dp"
+            android:fontFamily="@font/segoe_ui"
             android:layout_height="wrap_content"
-            android:text="@string/_252_calories"
-            android:textSize="19sp"
-
+            android:text="@string/alamat"
+            android:textSize="10sp"
+            android:layout_marginStart="30dp"
             android:textColor="#000"
-            android:layout_gravity="center"/>
+   />
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="21dp">
-            <TextView
+            android:layout_marginTop="18dp"
+            android:layout_marginStart="30dp">
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="?android:attr/ratingBarStyleSmall"
                 android:layout_width="wrap_content"
-                android:fontFamily="@font/segoe_ui"
                 android:layout_height="wrap_content"
-                android:text="@string/serving_amount"
-                android:textSize="16sp"
-                android:textColor="#000"
-                android:layout_marginStart="35dp"
-                android:layout_marginEnd="198dp"/>
-            <Spinner
+                android:layout_marginEnd="8dp"
+
+                android:rating="4"
+                android:theme="@style/RatingBar"
+               />
+            <TextView
+                android:id="@+id/tv_rating"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                tools:text="5.0" />
+
+
         </LinearLayout>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/segoe_ui"
-            android:text="@string/macronutrients"
+            android:text="@string/harga"
             android:textSize="16sp"
             android:textColor="#000"
-            android:layout_marginStart="35dp"
+            android:layout_marginStart="30dp"
             android:layout_marginEnd="198dp"
             android:layout_marginTop="11dp"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="16dp">
-            <ImageView
-                android:layout_width="11dp"
-                android:layout_height="11dp"
-                android:src="@drawable/dotbiru"
-                android:layout_marginEnd="11dp"
-                android:layout_gravity="center_vertical"/>
-            <TextView
-                android:id="@+id/carbo_info"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="@string/_42_carbohirates"
-                android:textSize="14sp"
-                android:fontFamily="@font/segoe_ui"
-                android:textColor="#0075FF"
-                android:layout_marginEnd="11dp"/>
-            <ImageView
-                android:layout_width="11dp"
-                android:layout_height="11dp"
-                android:src="@drawable/dotijo"
-                android:layout_marginEnd="11dp"
-                android:layout_gravity="center_vertical"/>
-            <TextView
-                android:id="@+id/tv_fat_info"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:fontFamily="@font/segoe_ui"
-                android:text="@string/_24_fat"
-                android:textSize="14sp"
-                android:textColor="#FF8F50"
-                android:layout_marginEnd="11dp"/>
-            <ImageView
-                android:layout_width="11dp"
-                android:layout_height="11dp"
-                android:src="@drawable/dotorange"
-                android:layout_marginEnd="11dp"
-                android:layout_gravity="center_vertical"/>
-            <TextView
-                android:id="@+id/tv_protein_info"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="@string/_34_protein"
-                android:fontFamily="@font/segoe_ui"
-                android:textSize="14sp"
-                android:textColor="#49E201"
-                android:layout_marginEnd="11dp"/>
-        </LinearLayout>
-        <Button
-            android:id="@+id/btn_add_detail_food"
-            android:layout_width="229dp"
-            android:layout_gravity="center"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:background="@drawable/radius_burned_button"
-            android:text="@string/Addfood"
-            android:textAllCaps="false"
-            android:textColor="#ffffff"
-            android:textSize="18sp" />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="#BFBFBF"
-            android:layout_marginTop="26dp"
-            android:layout_marginBottom="16dp"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/segoe_ui"
-            android:text="@string/available_at"
+            android:fontFamily="@font/segoe_ui_bold"
+            android:text="@string/include"
             android:textSize="16sp"
             android:textColor="#000"
-            android:layout_marginStart="35dp"/>
-        <View
+            android:layout_marginStart="27dp"
+            android:layout_marginEnd="198dp"
+            android:layout_marginTop="11dp"/>
+
+        <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:id="@+id/linear_breakfast"
+        android:layout_height="71dp"
+        android:background="@drawable/linear_menu_new"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="13dp"
+        >
+        <ImageView
+            android:layout_width="61dp"
+            android:id="@+id/img_egg"
+            android:layout_height="match_parent"
+            android:layout_marginStart="3dp"
+            android:src="@drawable/speaker"
+            android:layout_marginVertical="5dp"
+            android:layout_alignParentLeft="true"/>
+
+
+        <TextView
+            android:id="@+id/tv_today_breakfast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/img_egg"
+            android:fontFamily="@font/segoe_ui_bold"
+            android:text="Sound System"
+            android:textColor="#332D2D"
+            android:textSize="18sp" />
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/btn_add_breakfast"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginVertical="20dp"
+            android:layout_marginRight="20dp"
+            fancy:fb_iconPaddingLeft="0dp"
+            fancy:fb_iconPaddingRight="0dp"
+            fancy:fb_defaultColor="#ffff"
+            fancy:fb_focusColor="#313131"
+            fancy:fb_iconResource="@drawable/plus_button"
+            fancy:fb_radius="64dp"
+            fancy:fb_textColor="#FFFFFF"
+            />
+
+    </RelativeLayout>
+
+        <RelativeLayout
+
             android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="#BFBFBF"
+            android:id="@+id/linear_breakfast"
+            android:layout_height="71dp"
+            android:background="@drawable/linear_menu_new"
             android:layout_marginTop="16dp"
-            android:layout_marginBottom="11dp"/>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="35dp"
-            android:orientation="horizontal">
-            <LinearLayout
+            android:layout_marginHorizontal="13dp"
+            >
+            <ImageView
+                android:layout_width="61dp"
+                android:id="@+id/img_egg"
+                android:layout_height="match_parent"
+                android:layout_marginStart="3dp"
+                android:src="@drawable/catering"
+                android:layout_marginVertical="5dp"
+                android:layout_alignParentLeft="true"/>
+
+
+            <TextView
+                android:id="@+id/tv_today_breakfast"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/segoe_ui"
-                    android:text="@string/randy_s_restaurant"
-                    android:textSize="14sp"
-                    android:textColor="#000"
-                    android:layout_marginBottom="6dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/_0_5_km"
-                    android:textSize="14sp"
-                    android:fontFamily="@font/segoe_ui"
-                    android:textColor="#5F5F5F"/>
-            </LinearLayout>
-            <ImageView
-                android:layout_width="10dp"
-                android:layout_height="16dp"
-                android:src="@drawable/arrow"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="209dp"/>
-        </LinearLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#BFBFBF"
-            android:layout_marginTop="11dp"
-            android:layout_marginBottom="11dp"/>
-        <LinearLayout
+                android:layout_marginLeft="9dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/img_egg"
+                android:fontFamily="@font/segoe_ui_bold"
+                android:text="Catering"
+                android:textColor="#332D2D"
+                android:textSize="18sp" />
+
+            <mehdi.sakout.fancybuttons.FancyButton
+                android:id="@+id/btn_add_breakfast"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginVertical="20dp"
+                android:layout_marginRight="20dp"
+                fancy:fb_iconPaddingLeft="0dp"
+                fancy:fb_iconPaddingRight="0dp"
+                fancy:fb_defaultColor="#ffff"
+                fancy:fb_focusColor="#313131"
+                fancy:fb_iconResource="@drawable/plus_button"
+                fancy:fb_radius="64dp"
+                fancy:fb_textColor="#FFFFFF"
+                />
+
+        </RelativeLayout>
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="35dp"
-            android:orientation="horizontal">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/mc_diddles"
-                    android:fontFamily="@font/segoe_ui"
-                    android:textSize="14sp"
-                    android:textColor="#000"
-                    android:layout_marginBottom="6dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/_0_7_km"
-                    android:fontFamily="@font/segoe_ui"
-                    android:textSize="14sp"
-                    android:textColor="#5F5F5F"/>
-            </LinearLayout>
-            <ImageView
-                android:layout_width="10dp"
-                android:layout_height="16dp"
-                android:src="@drawable/arrow"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="261dp"/>
-        </LinearLayout>
-        <View
+            android:fontFamily="@font/segoe_ui_bold"
+            android:text="@string/date"
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:layout_marginStart="27dp"
+            android:layout_marginEnd="198dp"
+            android:layout_marginTop="11dp"/>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#BFBFBF"
-            android:layout_marginTop="11dp"
-            android:layout_marginBottom="11dp"/>
+            android:layout_height="wrap_content"
+android:layout_marginStart="30dp"
+            android:layout_marginTop="17dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <ImageButton
+                android:id="@+id/btn_once_time"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/alarm1" />
+            <TextView
+                android:id="@+id/tv_once_time"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textSize="16sp"
+                android:layout_height="wrap_content"
+                android:text="@string/alarm_time" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_set_once_alarm"
+
+            android:layout_width="250dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_margin="27dp"
+            android:background="@drawable/radius_burned_button"
+            android:text="@string/book_now"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="18sp"  />
     </LinearLayout>
 </RelativeLayout>
+</ScrollView>
