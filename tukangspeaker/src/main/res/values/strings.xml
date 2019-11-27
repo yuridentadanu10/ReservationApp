@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">TukangSpeaker</string>
+    <string name="nama_hotel">Ballroom Saphire Hotel</string>
+    <string name="alamat">jl Yogyakarta 1 no 24 gejayan Daerah istimewa Yogyakarta</string>
+    <string name="harga">Rp 100.000 / jam</string>
+    <string name="include">Include</string>
+    <string name="date">Date</string>
+    <string name="book_now">book now</string>
+    <string name="tanggal">27 February 2019</string>
+    <string name="input_error_email">email error</string>
+    <string name="input_error_email_invalid">email error</string>
+    <string name="input_error_password">password error</string>
+    <string name="input_error_password_length">length error</string>
+    <string name="input_error_name">error name</string>
+    <string name="input_confirm_false">salah</string>
+    <string name="Ballroom_hotel">Ballroom Hotel</string>
+    <string name="Convention_center">Convention Center</string>
+</resources>
